@@ -1,41 +1,92 @@
 ﻿# CSV Data Cleaning & Report Generator
 
-A Python automation tool that cleans CSV files and generates a summary report.
+A lightweight Python automation tool that cleans CSV datasets, identifies data-quality issues, and generates a summary report. Designed to reduce repetitive manual data-cleaning work.
 
 ## Features
+
 - Removes duplicate rows
-- Detects missing values
-- Trims extra spaces from text fields
-- Exports cleaned CSV data
-- Generates a readable summary report
+- Detects and reports missing values
+- Trims extra whitespace from text fields
+- Exports cleaned data to a new CSV file
+- Generates a readable text summary report
 
 ## Technologies
+
 - Python
 - Pandas
 
+## Project Structure
+
+```text
+Python-Automation-Portfolio/
+├── clean_data.py
+├── sample_data.csv
+├── README.md
+└── .gitignore
+```
+
+## Installation
+
+1. Install Python 3.
+2. Open a terminal in the project folder.
+3. Install the required library:
+
+   ```bash
+   pip install pandas
+   ```
+
 ## How to Run
 
-1. Install Python.
-2. Install pandas:
+Run the script from the project folder:
 
-   pip install pandas
+```bash
+python clean_data.py
+```
 
-3. Place your input file in the project folder as `sample_data.csv`.
-4. Run:
-
-   python clean_data.py
+The script reads `sample_data.csv` and generates the output files.
 
 ## Output Files
-- `cleaned_data.csv` — cleaned dataset
-- `summary_report.txt` — cleaning summary
+
+| File | Description |
+|---|---|
+| `cleaned_data.csv` | Cleaned dataset |
+| `summary_report.txt` | Summary of the cleaning process |
 
 ## Sample Test Results
-- Input rows: 5
-- Output rows: 4
-- Duplicate rows removed: 1
-- Missing cells detected: 1
+
+Tested with the included sample dataset.
+
+| Metric | Result |
+|---|---:|
+| Original rows | 5 |
+| Rows after cleaning | 4 |
+| Duplicate rows removed | 1 |
+| Missing cells detected | 1 |
+
+*These results apply to the sample dataset and are not a benchmark for larger datasets.*
 
 ## Limitations
+
 - Missing values are reported, not automatically filled.
-- Duplicate rows are removed only when all column values match.
-- Use a backup before processing important business data.
+- Rows are considered duplicates when all column values match.
+- The tool is designed for CSV files and has been tested with the included sample data.
+- Always keep a backup before processing important business data.
+
+## Potential Use Cases
+
+- Cleaning customer or contact lists
+- Removing duplicate spreadsheet records
+- Preparing datasets for analysis
+- Automating repetitive CSV-cleaning tasks
+
+## Future Improvements
+
+- Add Excel (`.xlsx`) file support
+- Add configurable missing-value handling
+- Generate reports in additional formats
+
+## Author
+
+**Nouman Khan**
+
+GitHub: [@noumankhanoffice-a11y](https://github.com/noumankhanoffice-a11y)
